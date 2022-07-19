@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { ToastContainer } from "react-toastify";
+import Footer from "./components/Footer/Index";
+import NavBar from "./components/NavBar";
+import ParkingScreen from "./components/Screen/ParkingScreen";
+import background from "./img/background.jpg";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* Navbar */}
+      <NavBar />
+      <div style={{ minHeight: "87vh" }}>
+        <ParkingScreen />
+      </div>
+      {/* Footer */}
+      <Footer />
+      <ToastContainer position="bottom-right" />
     </div>
   );
 }
